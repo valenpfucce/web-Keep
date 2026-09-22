@@ -1,0 +1,213 @@
+
+/* VARIABLES GLOBALES (THEME) */
+:root {
+    /* Paleta de colores */
+    --color-primario: #a16565;          /* Terracota papelero original */
+    --color-primario-oscuro: #854f4f;   /* Terracota más intenso para hovers/contrastes */
+    --color-primario-suave: #fdf5f5;    /* Fondo muy claro con matiz terracota */
+    --color-secundario: #FFD500;        /* Amarillo de destaque original */
+    --color-secundario-oscuro: #e6c000; /* Amarillo para hovers */
+    --color-fondo: #ffffff;
+    --color-fondo-suave: #f9f9fb;       /* Fondo alternativo moderno */
+    --color-texto: #2b2b30;             /* Texto oscuro de alta legibilidad */
+    --color-texto-suave: #62626e;       /* Texto secundario */
+    --color-blanco: #ffffff;
+    --color-borde: #e4e4e9;             /* Borde sutil */
+
+    /* Tipografías */
+    --font-principal: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-titulos: "Poppins", sans-serif;
+    --font-header-menu: "Montserrat", sans-serif;
+
+    /* Bordes */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+
+    /* Sombras premium */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+    --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+    /* Transiciones */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--font-principal);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Contenedor general del contenido */
+#content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    background: var(--color-fondo); 
+    display: block;
+    text-decoration: none;
+}
+
+/* --- SECCIÓN BANNER KEEPLIFE --- */
+.keeplife-banner-section {
+    width: 100%;
+    background-image: url('../assets/img/banner-keep.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 28px 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-normal);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.keeplife-banner-link {
+    text-decoration: none;
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+}
+
+.keeplife-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+.keeplife-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    background-color: var(--color-blanco);
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-normal);
+}
+
+.keeplife-banner-logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: var(--transition-normal);
+}
+
+.keeplife-banner-text-wrap {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-blanco);
+}
+
+.keeplife-banner-tagline {
+    font-size: 1.5rem;
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    line-height: 1.2;
+}
+
+.keeplife-banner-domain {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    color: var(--color-secundario);
+    text-transform: lowercase;
+    margin-top: 2px;
+}
+
+.keeplife-banner-arrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-blanco);
+    color: #4b6e2d; /* Verde KeepLife */
+    padding: 10px 22px;
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+    flex-shrink: 0;
+}
+
+.keeplife-banner-arrow .arrow-icon {
+    width: 18px;
+    height: 18px;
+    transition: var(--transition-fast);
+}
+
+/* Hover effects */
+.keeplife-banner-section:hover {
+    filter: brightness(0.95);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+}
+
+.keeplife-banner-link:hover .keeplife-logo-wrap {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.keeplife-banner-link:hover .keeplife-banner-arrow {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    box-shadow: var(--shadow-md);
+    transform: translateX(3px);
+}
+
+.keeplife-banner-link:hover .keeplife-banner-arrow .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Responsive banner */
+@media (max-width: 768px) {
+    .keeplife-banner-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 10px 0;
+    }
+    
+    .keeplife-banner-text-wrap {
+        align-items: center;
+    }
+    
+    .keeplife-banner-tagline {
+        font-size: 1.25rem;
+    }
+    
+    .keeplife-banner-arrow {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,379 @@
+/* ==========================================================================
+   KEEP LIFE® - HEADER & NAVEGACIÓN
+   Cabecera fija, barra de horarios y menú móvil táctil (Checkbox Hack)
+   ========================================================================== */
+
+#header {
+    background: var(--color-blanco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    transition: var(--transition-normal);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Logotipo */
+.header-left {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: opacity var(--transition-normal);
+}
+
+.logo-link:hover {
+    opacity: 0.92;
+}
+
+.logo-header-icon {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform var(--transition-normal);
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.logo-header-name {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform var(--transition-normal);
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.logo-link:hover .logo-header-icon {
+    transform: scale(1.03);
+}
+
+/* Menú de Navegación */
+.nav-menu {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-list li {
+    position: relative;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 10px 16px;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0.6px;
+    font-family: var(--font-header-menu);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+/* Hover e item activo */
+.menu-list li a:hover {
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+}
+
+.menu-list li a.active {
+    color: var(--color-primario);
+    background-color: var(--color-primario-suave);
+    font-weight: 800;
+}
+
+.menu-list li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 16px;
+    right: 16px;
+    height: 3px;
+    background-color: var(--color-primario);
+    border-radius: var(--radius-full);
+}
+
+/* Redes Sociales en Header */
+.header-right {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-instagram-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-left: 20px;
+    transition: transform var(--transition-fast);
+}
+
+.header-instagram-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background-color: var(--color-borde);
+}
+
+.header-instagram-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+    transition: transform var(--transition-normal);
+}
+
+.header-instagram-link:hover .header-instagram-icon {
+    transform: scale(1.12);
+}
+
+/* --- BARRA DE HORARIOS (SUPERIOR / INFERIOR DEL HEADER) --- */
+.header-horarios-bar {
+    background-color: var(--color-fondo-oscuro);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    border-bottom: 2px solid var(--color-secundario);
+    font-family: var(--font-header-menu);
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.5px;
+}
+
+.horarios-text {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.horarios-text .highlight {
+    color: var(--color-secundario);
+    font-weight: 700;
+}
+
+/* --- MENÚ MÓVIL TÁCTIL (CHECKBOX HACK) --- */
+.menu-toggle-checkbox {
+    display: none !important;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(27, 36, 23, 0.45);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: var(--transition-normal);
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--color-texto);
+    border-radius: var(--radius-full);
+    transition: var(--transition-normal);
+}
+
+/* --- RESPONSIVIDAD DEL HEADER --- */
+@media (max-width: 992px) {
+    #header {
+        position: relative;
+        top: auto;
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+    }
+
+    .logo-header-icon {
+        height: 38px;
+    }
+
+    .logo-header-name {
+        height: 17px;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: flex;
+    }
+
+    /* Cajón lateral (Drawer Menu) */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 290px;
+        height: 100vh;
+        background-color: var(--color-blanco);
+        z-index: 999;
+        box-shadow: var(--shadow-lg);
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        padding: 85px 24px 40px 24px;
+        align-items: stretch;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        overflow-y: auto;
+        align-items: stretch;
+    }
+
+    .menu-list li {
+        width: 100%;
+    }
+
+    .menu-list li a {
+        font-size: 1rem;
+        padding: 14px 20px;
+        width: 100%;
+        background-color: var(--color-fondo-suave);
+        color: var(--color-texto);
+        font-weight: 700;
+        display: flex;
+        border-radius: var(--radius-sm);
+        border-left: 4px solid transparent;
+        transition: var(--transition-normal);
+    }
+
+    .menu-list li a:hover,
+    .menu-list li a.active {
+        background-color: var(--color-primario-suave);
+        color: var(--color-primario);
+        border-left-color: var(--color-primario);
+    }
+
+    .menu-list li a.active::after {
+        display: none;
+    }
+
+    /* Redes sociales añadidas al drawer móvil */
+    .drawer-social {
+        margin-top: auto;
+        padding-top: 25px;
+        border-top: 1px solid var(--color-borde);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .drawer-social a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--color-texto-suave);
+    }
+
+    /* Mostrar overlay y desplegar drawer */
+    .menu-toggle-checkbox:checked~.menu-overlay {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-toggle-checkbox:checked~.header-content .nav-menu {
+        transform: translateX(0);
+    }
+
+    /* Animación de 3 líneas a X */
+    .menu-toggle-checkbox:checked~.header-content .hamburger-btn span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+        background-color: var(--color-primario);
+    }
+
+    .menu-toggle-checkbox:checked~.header-content .hamburger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle-checkbox:checked~.header-content .hamburger-btn span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+        background-color: var(--color-primario);
+    }
+}
+
+@media (max-width: 576px) {
+    .header-horarios-bar {
+        font-size: 0.74rem;
+        padding: 6px 12px;
+    }
+
+    .logo-header-icon {
+        height: 32px;
+    }
+
+    .logo-header-name {
+        height: 14px;
+    }
+}

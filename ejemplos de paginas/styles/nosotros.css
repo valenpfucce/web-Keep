@@ -1,0 +1,366 @@
+/* --- HOJA DE ESTILOS PARA SECCIÓN NOSOTROS --- */
+
+/* --- SECCIÓN TITULO PRINCIPAL --- */
+.section-title-container {
+    padding: 60px 20px 40px;
+    text-align: center;
+    background-color: var(--color-primario-suave);
+    font-family: var(--font-titulos);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.section-title-container .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.section-title-container .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-texto-suave);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Badge y Estilos Comunes */
+.about-badge {
+    background-color: var(--color-primario-suave);
+    color: var(--color-primario);
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-family: var(--font-header-menu);
+}
+
+.badge-center {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- SECCIÓN 1: INTRO / QUIÉNES SOMOS --- */
+.about-intro-section {
+    padding: 80px 10%;
+    background-color: var(--color-fondo);
+    font-family: var(--font-principal);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title {
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    color: var(--color-texto);
+    margin-bottom: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.about-p {
+    font-size: 1rem;
+    color: var(--color-texto-suave);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-p strong {
+    color: var(--color-texto);
+}
+
+.about-image-content {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 6px solid var(--color-blanco);
+    background: #eaeaea;
+    transition: var(--transition-normal);
+}
+
+.about-image-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    transition: var(--transition-slow);
+}
+
+.about-image-content:hover .about-img {
+    transform: scale(1.03);
+}
+
+/* --- SECCIÓN 2: LOGÍSTICA / REPARTO --- */
+.logistics-section {
+    padding: 80px 10%;
+    background-color: var(--color-fondo-suave);
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+    font-family: var(--font-principal);
+}
+
+.logistics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logistics-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.logistics-header .section-title {
+    font-family: var(--font-titulos);
+    color: var(--color-primario);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.logistics-header .section-subtitle {
+    color: var(--color-texto-suave);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.logistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.logistics-card {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-md);
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.logistics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primario);
+}
+
+.logistics-icon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.logistics-card h3 {
+    font-family: var(--font-titulos);
+    color: var(--color-texto);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.logistics-card p {
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- SECCIÓN 3: SERVICIOS --- */
+.services-section {
+    padding: 80px 10%;
+    background-color: var(--color-fondo);
+    font-family: var(--font-principal);
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.services-header .section-title {
+    font-family: var(--font-titulos);
+    color: var(--color-primario);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.services-header .section-subtitle {
+    color: var(--color-texto-suave);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.services-grid .service-card {
+    flex: 1 1 450px;
+    max-width: 550px;
+    width: 100%;
+}
+
+.service-card {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-md);
+    padding: 40px 35px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primario);
+}
+
+.service-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--color-borde);
+    padding-bottom: 15px;
+}
+
+.service-icon-wrap {
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primario-suave);
+    border-radius: var(--radius-sm);
+}
+
+.service-card-header h3 {
+    font-family: var(--font-titulos);
+    color: var(--color-texto);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.service-card-body {
+    flex-grow: 1;
+}
+
+.service-card-body p {
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.service-card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-card-body li {
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: var(--color-texto-suave);
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.service-card-body li:last-child {
+    margin-bottom: 0;
+}
+
+.service-card-body li::before {
+    content: "✓";
+    color: var(--color-primario);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.service-card-body li strong {
+    color: var(--color-texto);
+}
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 1024px) {
+    .about-grid {
+        gap: 40px;
+    }
+    
+    .about-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-intro-section, 
+    .logistics-section, 
+    .services-section {
+        padding: 50px 20px;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-image-content {
+        order: -1; /* Muestra la imagen arriba en móviles */
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .logistics-header .section-title,
+    .services-header .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+}

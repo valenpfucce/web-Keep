@@ -1,0 +1,312 @@
+/* ==========================================================================
+   KEEP LIFE® - CONTACTO
+   Tarjetas de canales directos, formulario de asesoramiento y mapa
+   ========================================================================== */
+
+/* --- BLOQUE 1: TARJETAS DE CONTACTO DIRECTO --- */
+.contact-info-section {
+    padding: 65px 10% 40px;
+    background-color: var(--color-fondo);
+    font-family: var(--font-principal);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-md); 
+    padding: 35px 26px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md); 
+    border-color: var(--color-primario);
+}
+
+.info-card-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.info-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info-card h3 {
+    color: var(--color-primario); 
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-family: var(--font-titulos);
+    font-weight: 700;
+}
+
+.info-card p {
+    color: var(--color-texto-suave);
+    margin-bottom: 20px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.contact-link {
+    display: inline-block;
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 4px 0;
+    font-size: 1.05rem;
+    transition: var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: var(--color-primario);
+}
+
+.email-link {
+    font-size: 0.92rem;
+    word-break: break-all;
+}
+
+/* Botones de Redes Sociales en Contacto */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: var(--radius-full);
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    width: 90%;
+    transition: var(--transition-normal);
+    box-shadow: var(--shadow-sm);
+    font-family: var(--font-header-menu);
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-social.whatsapp {
+    background-color: #25D366;
+}
+
+.btn-social.whatsapp:hover {
+    background-color: #20ba59;
+}
+
+.btn-social.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.btn-social.instagram:hover {
+    filter: brightness(1.08);
+}
+
+/* --- BLOQUE 2: FORMULARIO DE CONSULTA TÉCNICA (INFORMATIVO) --- */
+.contact-form-section {
+    padding: 40px 10% 70px;
+    background-color: var(--color-fondo);
+    font-family: var(--font-principal);
+}
+
+.form-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    background: var(--color-fondo-suave);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-lg);
+    padding: 45px 40px;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-header h2 {
+    font-size: 1.8rem;
+    font-family: var(--font-titulos);
+    color: var(--color-primario);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: var(--color-texto-suave);
+    font-size: 0.96rem;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    font-family: var(--font-header-menu);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 13px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    font-size: 0.95rem;
+    transition: var(--transition-normal);
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(61, 120, 36, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit-wrap {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.form-notice {
+    grid-column: span 2;
+    font-size: 0.8rem;
+    color: var(--color-texto-muted);
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* --- BLOQUE 3: MAPA Y UBICACIÓN --- */
+.map-section {
+    padding: 50px 10% 70px;
+    background-color: var(--color-fondo-suave);
+    text-align: center;
+    font-family: var(--font-principal);
+    border-top: 1px solid var(--color-borde);
+}
+
+.map-section .section-title {
+    color: var(--color-primario);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    font-family: var(--font-titulos);
+}
+
+.address-text {
+    font-size: 1.05rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 35px;
+}
+
+.address-text strong {
+    color: var(--color-texto);
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 5px solid var(--color-blanco);
+    background: #eaeaea;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .contact-info-section, .contact-form-section, .map-section {
+        padding: 40px 15px;
+    }
+
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+
+    .form-submit-wrap {
+        grid-column: span 1;
+    }
+
+    .form-notice {
+        grid-column: span 1;
+    }
+
+    .btn-social {
+        width: 100%;
+    }
+
+    .map-container iframe {
+        height: 330px !important;
+    }
+}

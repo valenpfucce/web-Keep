@@ -1,0 +1,319 @@
+#header {
+    background: var(--color-blanco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    transition: var(--transition-normal);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.logo-header-content {
+    height: 65px;
+    width: auto;
+    display: block;
+    transition: transform var(--transition-normal);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.logo-header-content:hover {
+    transform: scale(1.02);
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-list li {
+    position: relative;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    letter-spacing: 0.5px;
+    font-family: var(--font-header-menu);
+    border-radius: var(--radius-sm);
+    transition: var(--transition-normal);
+}
+
+/* Hover premium */
+.menu-list > li > a:hover {
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+}
+
+/* Instagram icon in header */
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.header-instagram-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    position: relative;
+    padding-left: 30px;
+}
+
+.header-instagram-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 24px;
+    background-color: var(--color-secundario);
+}
+
+
+.header-instagram-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
+
+/* --- BARRA DE HORARIOS (BOTTOM HEADER) --- */
+.header-horarios-bar {
+    background-color: var(--color-texto); /* Color oscuro elegante */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--color-secundario);
+    font-family: var(--font-header-menu);
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.5px;
+}
+
+.horarios-text {
+    font-weight: 600;
+}
+
+/* --- SUBMENÚ DESPLEGABLE PREMIUM --- */
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-blanco);
+    min-width: 220px;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-borde);
+    z-index: 100;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+/* Mostrar menú en hover */
+.menu-list li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.submenu li {
+    display: block;
+    width: 100%;
+}
+
+.submenu li a {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    display: block;
+    text-align: left;
+    border-radius: 0;
+    font-weight: 500;
+    color: var(--color-texto);
+    transition: var(--transition-fast);
+}
+
+.submenu li a:hover {
+    background-color: var(--color-primario-suave);
+    color: var(--color-primario);
+    padding-left: 25px; /* Efecto sutil de desplazamiento lateral */
+}
+
+/* --- ELEMENTOS DE MENU LATERAL PARA MOVIL --- */
+.menu-toggle-checkbox {
+    display: none !important;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(30, 30, 34, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 1001; /* Arriba del drawer */
+    transition: var(--transition-normal);
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--color-texto);
+    border-radius: var(--radius-full);
+    transition: var(--transition-normal);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    #header {
+        position: relative;
+        top: auto;
+    }
+
+    .header-content {
+        flex-direction: row; /* Alinear logo a la izquierda y hamburguesa a la derecha */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo-header-content {
+        height: 42px;
+    }
+
+    .right {
+        display: none; /* Ocultar horarios del header principal en móvil */
+    }
+
+    .hamburger-btn {
+        display: flex; /* Mostrar botón de hamburguesa */
+    }
+
+    /* Cajón lateral (Drawer Menu) */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--color-blanco);
+        z-index: 999;
+        box-shadow: var(--shadow-lg);
+        transform: translateX(100%);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        padding: 90px 24px 40px 24px;
+        align-items: stretch;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        overflow-y: auto;
+        align-items: stretch;
+    }
+
+    .menu-list li {
+        width: 100%;
+        scroll-snap-align: none;
+        flex-shrink: 1;
+    }
+
+    .menu-list li a {
+        font-size: 1rem;
+        padding: 12px 18px;
+        width: 100%;
+        white-space: normal;
+        background-color: transparent;
+        border: none;
+        color: var(--color-texto);
+        font-weight: 600;
+        display: block;
+        border-radius: var(--radius-sm);
+        transition: var(--transition-normal);
+    }
+
+    .menu-list li a:hover {
+        background-color: var(--color-primario-suave);
+        color: var(--color-primario);
+    }
+
+    .submenu {
+        display: none !important;
+    }
+
+    /* Mostrar overlay y deslizar menú cuando está activado */
+    .menu-toggle-checkbox:checked ~ .menu-overlay {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-toggle-checkbox:checked ~ .header-content .nav-menu {
+        transform: translateX(0);
+    }
+
+    /* Animación de Hamburguesa a 'X' */
+    .menu-toggle-checkbox:checked ~ .header-content .hamburger-btn span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: var(--color-primario);
+    }
+
+    .menu-toggle-checkbox:checked ~ .header-content .hamburger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle-checkbox:checked ~ .header-content .hamburger-btn span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        background-color: var(--color-primario);
+    }
+}

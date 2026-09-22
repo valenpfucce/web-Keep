@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>El Papelero</title>
+    <meta name="description" content="Distribuidora mayorista y minorista de artículos de papelera, descartables, artículos de librería y artículos de oficina. Entrega rápida, amplio catálogo y precios competitivos para comercios, empresas y consumidores. 
+    Conozca la trayectoria de El Papelero, nuestra fabricación de polietileno, salón de ventas al público, cobertura de reparto propio en GBA/CABA e insumos mayoristas y minoristas.">
+    
+    <meta name="keywords" content="papelera mayorista, papelera minorista, distribuidora de papelera, distribuidora de descartables, artículos de librería mayorista, venta de insumos de oficina, proveedor de artículos de librería, 
+    venta de descartables para comercios, insumos descartables para negocios, papelería comercial, artículos escolares mayorista, útiles escolares económicos, productos de papel para empresas, servicios de distribución de papelera, productos de librería y oficina, 
+    artículos descartables para gastronomía, venta de papel y cartón, insumos de limpieza y papel, 
+    distribuidora de insumos comerciales, proveedor mayorista de descartables, proveedor de artículos de librería, papelera, libreria, productos descartables, venta mayorista, venta minorista, bandejas, bolsas, limpieza">
+    
+    <meta name="author" content="El Papelero">
+
+    <!-- Open Graph (para redes sociales) -->
+    <meta property="og:title" content="El Papelero - Venta de productos descartables y papelería">
+    <meta property="og:description" content="Venta mayorista y minorista de productos descartables, papelera y libreria.">
+    <meta property="og:image" content="assets/img/preview.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/home.css">
+    
+    <!-- FUENTE -->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER  -->
+    <div id="header"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="content">
+      
+      <div id="home"></div>
+      
+    </main>
+ 
+    <!-- FOOTER  -->
+    <div id="footer"></div>
+
+</body>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Cargar header y footer 
+        fetch("header.html").then(res => res.text()).then(html => document.getElementById("header").innerHTML = html);
+        fetch("footer.html").then(res => res.text()).then(html => document.getElementById("footer").innerHTML = html);
+        fetch("home.html").then(res => res.text()).then(html => document.getElementById("home").innerHTML = html);
+    </script>
+
+
+</html>

@@ -1,0 +1,375 @@
+/* ==========================================================================
+   KEEP LIFE® - NOSOTROS
+   Historia, ventajas competitivas, logística de flota propia y salón de ventas
+   ========================================================================== */
+
+/* --- SECCIÓN 1: INTRO / QUIÉNES SOMOS --- */
+.about-intro-section {
+    padding: 80px 10%;
+    background-color: var(--color-fondo);
+    font-family: var(--font-principal);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title {
+    font-family: var(--font-titulos);
+    font-size: 2.4rem;
+    color: var(--color-texto);
+    margin-bottom: 22px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.about-p {
+    font-size: 1.02rem;
+    color: var(--color-texto-suave);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-p strong {
+    color: var(--color-texto);
+}
+
+.about-image-content {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 5px solid var(--color-blanco);
+    background: #eaeaea;
+    transition: var(--transition-normal);
+}
+
+.about-image-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 35px rgba(43, 86, 24, 0.15);
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    transition: var(--transition-slow);
+}
+
+.about-image-content:hover .about-img {
+    transform: scale(1.03);
+}
+
+/* --- SECCIÓN 2: DIFERENCIALES TÉCNICOS NACIONALES --- */
+.national-tech-section {
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #f3f8ef 0%, #edf6e9 100%);
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.tech-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tech-card {
+    background: var(--color-blanco);
+    border-radius: var(--radius-md);
+    padding: 35px 28px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-borde);
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primario);
+}
+
+.tech-card-icon {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+}
+
+.tech-card h3 {
+    font-family: var(--font-titulos);
+    color: var(--color-primario);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.tech-card p {
+    font-size: 0.94rem;
+    color: var(--color-texto-suave);
+    line-height: 1.65;
+}
+
+/* --- SECCIÓN 3: LOGÍSTICA / REPARTO Y DISTRIBUCIÓN --- */
+.logistics-section {
+    padding: 80px 10%;
+    background-color: var(--color-fondo-suave);
+    font-family: var(--font-principal);
+}
+
+.logistics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logistics-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.logistics-header .section-title {
+    font-family: var(--font-titulos);
+    color: var(--color-primario);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.logistics-header .section-subtitle {
+    color: var(--color-texto-suave);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.logistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.logistics-card {
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-md);
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.logistics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primario);
+}
+
+.logistics-icon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.logistics-card h3 {
+    font-family: var(--font-titulos);
+    color: var(--color-texto);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.logistics-card p {
+    color: var(--color-texto-suave);
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+/* --- SECCIÓN 4: SERVICIOS Y SOLUCIONES --- */
+.services-section {
+    padding: 80px 10%;
+    background-color: var(--color-fondo);
+    font-family: var(--font-principal);
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.services-header .section-title {
+    font-family: var(--font-titulos);
+    color: var(--color-primario);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.services-header .section-subtitle {
+    color: var(--color-texto-suave);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    flex: 1 1 450px;
+    max-width: 550px;
+    background: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-md);
+    padding: 40px 35px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primario);
+}
+
+.service-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--color-borde);
+    padding-bottom: 16px;
+}
+
+.service-icon-wrap {
+    font-size: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background-color: var(--color-primario-suave);
+    border-radius: var(--radius-sm);
+}
+
+.service-card-header h3 {
+    font-family: var(--font-titulos);
+    color: var(--color-texto);
+    font-size: 1.28rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.service-card-body {
+    flex-grow: 1;
+}
+
+.service-card-body p {
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.service-card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-card-body li {
+    margin-bottom: 12px;
+    font-size: 0.93rem;
+    color: var(--color-texto-suave);
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.service-card-body li:last-child {
+    margin-bottom: 0;
+}
+
+.service-card-body li::before {
+    content: "✓";
+    color: var(--color-secundario);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.service-card-body li strong {
+    color: var(--color-texto);
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 1024px) {
+    .about-grid {
+        gap: 40px;
+    }
+
+    .about-title {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-intro-section, 
+    .national-tech-section,
+    .logistics-section, 
+    .services-section {
+        padding: 50px 20px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image-content {
+        order: -1;
+    }
+
+    .about-title {
+        font-size: 1.9rem;
+    }
+
+    .logistics-header .section-title,
+    .services-header .section-title {
+        font-size: 1.8rem;
+    }
+
+    .service-card {
+        padding: 28px 20px;
+    }
+}

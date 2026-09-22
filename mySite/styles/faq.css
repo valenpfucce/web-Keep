@@ -1,0 +1,222 @@
+/* ==========================================================================
+   KEEP LIFE® - FAQ (PREGUNTAS FRECUENTES)
+   Acordeones interactivos, categorías de consultas y tarjetas de asesoramiento
+   ========================================================================== */
+
+.faq-page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px 90px;
+}
+
+/* Filtro o navegación rápida de categorías */
+.faq-categories-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+
+.faq-cat-btn {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto-suave);
+    padding: 9px 20px;
+    border-radius: var(--radius-full);
+    font-size: 0.88rem;
+    font-weight: 700;
+    font-family: var(--font-header-menu);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.faq-cat-btn:hover,
+.faq-cat-btn.active {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border-color: var(--color-primario);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Grupo de preguntas por categoría */
+.faq-category-group {
+    margin-bottom: 45px;
+}
+
+.faq-category-title {
+    font-size: 1.4rem;
+    font-family: var(--font-titulos);
+    color: var(--color-primario);
+    font-weight: 800;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-primario-suave);
+}
+
+.faq-category-title span.group-icon {
+    font-size: 1.5rem;
+}
+
+/* Lista de Acordeones */
+.faq-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+}
+
+.faq-item:hover {
+    border-color: var(--color-secundario);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-item.active {
+    border-color: var(--color-primario);
+    box-shadow: var(--shadow-md);
+}
+
+/* Pregunta (Header del Acordeón) */
+.faq-question {
+    width: 100%;
+    padding: 22px 26px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    font-family: var(--font-titulos);
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    transition: var(--transition-fast);
+}
+
+.faq-question:hover {
+    color: var(--color-primario);
+}
+
+.faq-item.active .faq-question {
+    color: var(--color-primario);
+    background-color: var(--color-primario-suave);
+}
+
+/* Icono chevron animado */
+.faq-chevron {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    color: var(--color-primario);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item.active .faq-chevron {
+    transform: rotate(180deg);
+}
+
+/* Respuesta del Acordeón */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+    background-color: var(--color-blanco);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Suficiente para contenidos largos */
+    padding: 0 26px 24px 26px;
+}
+
+.faq-answer-inner {
+    padding-top: 15px;
+    border-top: 1px solid var(--color-borde);
+    color: var(--color-texto-suave);
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+.faq-answer-inner p {
+    margin-bottom: 12px;
+}
+
+.faq-answer-inner p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer-inner strong {
+    color: var(--color-texto);
+}
+
+.faq-answer-inner ul {
+    margin: 10px 0 14px 20px;
+    list-style-type: disc;
+}
+
+.faq-answer-inner li {
+    margin-bottom: 6px;
+}
+
+/* Tarjeta CTA de dudas al final */
+.faq-cta-card {
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-primario-oscuro) 100%);
+    color: var(--color-blanco);
+    border-radius: var(--radius-lg);
+    padding: 45px 35px;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.faq-cta-card h3 {
+    font-size: 1.8rem;
+    font-family: var(--font-titulos);
+    font-weight: 800;
+}
+
+.faq-cta-card p {
+    font-size: 1.05rem;
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .faq-page-container {
+        padding: 40px 15px 70px;
+    }
+
+    .faq-question {
+        padding: 18px 20px;
+        font-size: 0.98rem;
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px 20px;
+    }
+
+    .faq-cta-card {
+        padding: 35px 20px;
+    }
+
+    .faq-cta-card h3 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Contacto y Salón de Ventas - Keep Life® Bolsas Barrera</title>
+    <meta name="description" content="Contactate con Keep Life: atención personalizada por WhatsApp, teléfono y en nuestro salón de ventas de Av. Ing. Marconi 6521, El Palomar. Asesoramiento en bolsas para envasado al vacío.">
+    <meta name="keywords" content="contacto keep life, telefono keep life, whatsapp bolsas vacio, salon ventas el palomar, marconi 6521, distribuidora bolsas vacio buenos aires">
+    <meta name="author" content="Keep Life">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/keepLife_icon_clean.png">
+
+    <!-- Hojas de Estilo CSS Vanilla -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/contact.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER DINÁMICO -->
+    <div id="header"></div>
+
+    <!-- CONTENIDO PRINCIPAL: CONTACTO -->
+    <main id="content">
+
+        <!-- TÍTULO DE SECCIÓN -->
+        <section class="section-title-container">
+            <span class="badge badge-center">Canales de Atención</span>
+            <h1 class="section-title">CONTACTANOS</h1>
+            <p class="section-subtitle">
+                Estamos a tu entera disposición para resolver consultas técnicas, cotizar medidas especiales o coordinar tu pedido.
+            </p>
+        </section>
+
+        <!-- TARJETAS DE CONTACTO DIRECTO -->
+        <section class="contact-info-section">
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <div class="info-card-icon">📞</div>
+                    <h3>Llamanos</h3>
+                    <p>Atención telefónica comercial directa</p>
+                    <a href="tel:+5491153796041" class="contact-link">+54 9 11 5379-6041</a>
+                    <span style="font-size: 0.8rem; color: var(--color-texto-muted); margin-top: 5px;">Lun a Vie: 8:30 a 16:00 hs</span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <img src="assets/icons/whatsapp-icon-svg.svg" alt="WhatsApp Icon">
+                    </div>
+                    <h3>Escribinos</h3>
+                    <p>Consultas rápidas, asesoramiento y cotizaciones</p>
+                    <a href="https://wa.me/5491153796041?text=Hola%20Keep%20Life,%20quisiera%20asesoramiento%20sobre%20bolsas%20barrera%20para%20envasado%20al%20vac%C3%ADo." target="_blank" rel="noopener noreferrer" class="btn-social whatsapp">
+                        Iniciar WhatsApp
+                    </a>
+                    <a href="mailto:ventas@keeplife.com.ar" class="contact-link email-link">ventas@keeplife.com.ar</a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-icon">
+                        <img src="assets/icons/instagram.png" alt="Instagram Icon">
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Novedades, demostraciones y tips de conservación</p>
+                    <div class="social-buttons">
+                        <a href="https://www.instagram.com/keeplife_ar/" target="_blank" rel="noopener noreferrer" class="btn-social instagram">
+                            @keeplife_ar
+                        </a>
+                    </div>
+                    <span style="font-size: 0.8rem; color: var(--color-texto-muted); margin-top: 10px;">¡Seguinos en la comunidad!</span>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-card-icon">🏬</div>
+                    <h3>Salón de Ventas</h3>
+                    <p>Atención personalizada al mostrador</p>
+                    <strong style="color: var(--color-texto); font-size: 0.95rem; display: block; margin-bottom: 5px;">Av. Ing. Marconi 6521</strong>
+                    <span style="font-size: 0.84rem; color: var(--color-texto-suave);">El Palomar, Bs. As.</span>
+                    <span style="font-size: 0.8rem; color: var(--color-texto-muted); margin-top: 8px;">Sábados de 8:30 a 13:00 hs</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE CONSULTA TÉCNICA (INFORMATIVO) -->
+        <section class="contact-form-section">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Formulario de Asesoramiento Técnico</h2>
+                    <p>Completá los datos y un especialista en packaging y conservación se comunicará a la brevedad.</p>
+                </div>
+
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Gracias por contactarte con Keep Life! Hemos recibido tu consulta y nos comunicaremos a la brevedad.'); this.reset();">
+                    <div class="form-group">
+                        <label for="nombre">Nombre y Apellido *</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empresa">Empresa / Comercio (opcional)</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Ej: Carnicería Gourmet, Restaurante, Hogar...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 ..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="tipo-envasadora">Tipo de Envasadora que Utilizás *</label>
+                        <select id="tipo-envasadora" name="tipo-envasadora" required>
+                            <option value="" disabled selected>Seleccioná tu equipamiento...</option>
+                            <option value="domestica">Envasadora Doméstica / Externa (Rollos y Bolsas Gofradas)</option>
+                            <option value="campana">Envasadora Profesional a Campana (Bolsas Lisas Multicapa)</option>
+                            <option value="ambas">Ambos tipos de equipamiento</option>
+                            <option value="asesoramiento">Aún no dispongo de máquina / Deseo asesoramiento integral</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="mensaje">Detalle de tu Consulta o Productos a Envasar *</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Contanos qué alimentos o productos vas a envasar, si requerís cocción Sous-Vide o Autoclave, medidas estimadas o cantidades..." required></textarea>
+                    </div>
+
+                    <div class="form-submit-wrap">
+                        <button type="submit" class="btn btn-primary" style="padding: 14px 40px; font-size: 1rem;">
+                            Enviar Consulta
+                        </button>
+                    </div>
+
+                    <p class="form-notice">
+                        * Canal estrictamente informativo y de cotización. No requiere registro de usuario ni pagos en línea.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- MAPA Y UBICACIÓN FÍSICA -->
+        <section class="map-section">
+            <h2 class="section-title">NUESTRO SALÓN DE VENTAS</h2>
+            <p class="address-text">
+                📍 <strong>Av. Ingeniero Marconi 6521</strong>, B1684 El Palomar, Provincia de Buenos Aires, Argentina
+            </p>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.565406830386!2d-58.5779036!3d-34.6151433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb8360d84422f%3A0xc354366675001a18!2sAv.%20Ing.%20Guillermo%20Marconi%206521%2C%20B1684%20El%20Palomar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1703286000000!5m2!1ses!2sar" 
+                    height="450" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación de Keep Life en Google Maps">
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER DINÁMICO -->
+    <div id="footer"></div>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>

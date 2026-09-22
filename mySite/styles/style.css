@@ -1,0 +1,238 @@
+/* ==========================================================================
+   KEEP LIFE® - SITIO WEB OFICIAL
+   Variables Globales, Reset y Sistema de Diseño
+   ========================================================================== */
+
+/* VARIABLES GLOBALES (THEME) */
+:root {
+    /* Paleta de Colores Keep Life */
+    --color-primario: #3d7824;          /* Verde principal Keep Life */
+    --color-primario-oscuro: #2b5618;   /* Verde profundo para hovers y contraste */
+    --color-primario-suave: #f2f7ef;    /* Fondo suave con matiz fresco */
+    --color-secundario: #6eb33d;        /* Verde claro vibrante / lima */
+    --color-secundario-oscuro: #59962e; /* Acento para hovers */
+    --color-acento-dorado: #e2b43b;     /* Toque sutil de calidad */
+    
+    --color-fondo: #ffffff;
+    --color-fondo-suave: #f8faf6;       /* Fondo alternativo moderno */
+    --color-fondo-oscuro: #1b2417;      /* Fondo footer y elementos oscuros */
+    
+    --color-texto: #222720;             /* Texto carbón de alta legibilidad */
+    --color-texto-suave: #576152;       /* Texto secundario */
+    --color-texto-muted: #7b8776;       /* Texto atenuado */
+    --color-blanco: #ffffff;
+    --color-borde: #e2e9de;             /* Borde sutil orgánico */
+    --color-borde-hover: #c4d7bd;
+
+    /* Tipografías */
+    --font-principal: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-titulos: "Poppins", sans-serif;
+    --font-header-menu: "Montserrat", sans-serif;
+
+    /* Bordes redondeados */
+    --radius-xs: 4px;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+    --radius-full: 9999px;
+
+    /* Sombras refinadas */
+    --shadow-sm: 0 2px 6px rgba(43, 86, 24, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 6px 16px rgba(43, 86, 24, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 14px 32px rgba(43, 86, 24, 0.12), 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 20px rgba(110, 179, 61, 0.25);
+    --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+
+    /* Transiciones fluidas */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* RESET GENERAL */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--font-principal);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, textarea, select {
+    font-family: inherit;
+}
+
+/* CONTENEDOR PRINCIPAL */
+#content {
+    width: 100%;
+    flex: 1 0 auto;
+    background: var(--color-fondo);
+    display: block;
+}
+
+/* UTILIDADES Y COMPONENTES GLOBALES */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Títulos de sección globales */
+.section-title-container {
+    padding: 65px 20px 45px;
+    text-align: center;
+    background-color: var(--color-primario-suave);
+    border-bottom: 1px solid var(--color-borde);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+    border-radius: var(--radius-full);
+}
+
+.section-title-container .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    font-family: var(--font-titulos);
+    line-height: 1.2;
+}
+
+.section-title-container .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-texto-suave);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Badges informativos */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--color-primario-suave);
+    color: var(--color-primario);
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-header-menu);
+    border: 1px solid var(--color-borde);
+    margin-bottom: 16px;
+}
+
+.badge-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botones principales y secundarios */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: var(--radius-full);
+    font-family: var(--font-header-menu);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: var(--transition-normal);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: var(--color-blanco);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    background-color: #20ba59;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+/* Responsividad global */
+@media (max-width: 768px) {
+    .section-title-container {
+        padding: 45px 15px 35px;
+    }
+    
+    .section-title-container .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-title-container .section-subtitle {
+        font-size: 1rem;
+    }
+}
