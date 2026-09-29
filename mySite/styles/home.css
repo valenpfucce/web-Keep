@@ -29,7 +29,7 @@
 /* --- SECCIÓN 1: HERO / BANNER PRINCIPAL (ROLLOS GOFRADOS) --- */
 .hero-section.hero-gofrados {
     width: 100%;
-    min-height: 850px;
+    min-height: 900px;
     background-image: url('../assets/img/gofrados-keep.jpg');
     background-size: cover;
     background-position: center right;
