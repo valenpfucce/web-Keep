@@ -4,25 +4,40 @@
    ========================================================================== */
 
 #header {
+    display: contents;
+}
+
+/* Header de Navegación Sticky (sigue al usuario al hacer scroll) */
+.header-nav {
     background: var(--color-blanco);
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow-sm);
     width: 100%;
-    transition: var(--transition-normal);
     border-bottom: 1px solid var(--color-borde);
+    transition: box-shadow var(--transition-normal);
+}
+
+.header-nav.scrolled {
+    box-shadow: var(--shadow-md);
 }
 
 .header-content {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 10px 20px;
+    padding: 18px 20px; /* Aumentado 5px de alto cuando está arriba de todo */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
+    transition: padding var(--transition-normal);
+}
+
+/* Reducción de los 5px aumentados al bajar la barra / scrollear */
+.header-nav.scrolled .header-content {
+    padding: 10px 20px;
 }
 
 /* Logotipo */
@@ -62,8 +77,8 @@
     image-rendering: -webkit-optimize-contrast;
 }
 
-.logo-link:hover .logo-header-icon {
-    transform: scale(1.03);
+.logo-link:hover .logo-header-icon  {
+    transform: scale(1.1);
 }
 
 /* Menú de Navegación */
@@ -164,7 +179,7 @@
     transform: scale(1.12);
 }
 
-/* --- BARRA DE HORARIOS (SUPERIOR / INFERIOR DEL HEADER) --- */
+/* --- BARRA DE HORARIOS (ESTÁTICA, EN LA PARTE SUPERIOR DEL SITIO) --- */
 .header-horarios-bar {
     background-color: var(--color-fondo-oscuro);
     width: 100%;
@@ -177,6 +192,8 @@
     font-size: 0.82rem;
     color: rgba(255, 255, 255, 0.95);
     letter-spacing: 0.5px;
+    position: static; /* Barra completamente estática: no sigue al usuario ni tiene transiciones */
+    box-sizing: border-box;
 }
 
 .horarios-text {
@@ -235,16 +252,20 @@
 
 /* --- RESPONSIVIDAD DEL HEADER --- */
 @media (max-width: 992px) {
-    #header {
-        position: relative;
-        top: auto;
+    .header-nav {
+        position: sticky;
+        top: 0;
     }
 
     .header-content {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 20px;
+        padding: 14.5px 20px; /* Aumentado ~5px inicial en móviles */
+    }
+
+    .header-nav.scrolled .header-content {
+        padding: 12px 20px; /* Se achica 5px al scrollear en móviles */
     }
 
     .logo-header-icon {

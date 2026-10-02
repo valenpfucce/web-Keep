@@ -133,6 +133,27 @@
     transform: scale(1.03);
 }
 
+/* --- IMAGEN INDIVIDUAL PARA TARJETAS SIN CARRUSEL --- */
+.card-media-single {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: #172114;
+}
+
+.card-media-single img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.rubro-card:hover .card-media-single img {
+    transform: scale(1.03);
+}
+
 /* Caption sobreimpreso */
 .carousel-caption {
     position: absolute;
@@ -224,6 +245,10 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+}
+
+.rubro-card-content > :last-child {
+    margin-bottom: 0;
 }
 
 .rubro-badge-tag {
@@ -397,6 +422,53 @@
     margin-right: 4px;
 }
 
+/* --- BLOQUE DE MEDIDAS Y FORMATOS --- */
+.product-specs-box {
+    background: #f7fbf4;
+    border: 1px solid var(--color-borde);
+    border-left: 4px solid var(--color-primario);
+    border-radius: var(--radius-xs);
+    padding: 13px 16px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spec-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.spec-icon {
+    font-size: 1.15rem;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.spec-data strong {
+    color: var(--color-texto);
+    font-weight: 700;
+    margin-right: 4px;
+}
+
+.spec-data span {
+    color: var(--color-primario-oscuro);
+    font-weight: 600;
+}
+
+@media (min-width: 993px) {
+    .rubro-card:last-child:nth-child(odd) {
+        grid-column: span 2;
+        max-width: 820px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
 /* --- TABLA DE TIEMPOS DE CONSERVACIÓN (UNIDA EN ROLLOS GOFRADOS) --- */
 .durability-table-section {
     background: #fbfdf9;
@@ -556,7 +628,8 @@
         gap: 32px;
     }
 
-    .carousel-container {
+    .carousel-container,
+    .card-media-single {
         height: 290px;
     }
 
@@ -570,7 +643,8 @@
 }
 
 @media (max-width: 576px) {
-    .carousel-container {
+    .carousel-container,
+    .card-media-single {
         height: 240px;
     }
 

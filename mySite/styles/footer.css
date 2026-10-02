@@ -19,7 +19,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
+    gap: 25px;
     padding-bottom: 45px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -120,7 +120,23 @@
     line-height: 1.5;
 }
 
-.footer-contact-info li span.icon {
+.footer-contact-info li a.contact-link,
+.footer-contact-info li a {
+    color: #a4b49f;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: var(--transition-fast);
+}
+
+.footer-contact-info li a.contact-link:hover,
+.footer-contact-info li a:hover {
+    color: var(--color-secundario);
+    transform: translateX(4px);
+}
+
+.footer-contact-info .icon {
     flex-shrink: 0;
     font-size: 1.05rem;
 }
