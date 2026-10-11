@@ -283,6 +283,7 @@
     line-height: 1.65;
     color: var(--color-texto-suave);
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 /* Lista de Beneficios */
@@ -302,6 +303,7 @@
     font-size: 0.91rem;
     line-height: 1.55;
     color: var(--color-texto-suave);
+    text-align: justify;
 }
 
 .rubro-features-list .feature-icon {
@@ -340,6 +342,22 @@
     color: var(--color-texto-suave);
     line-height: 1.5;
     margin: 0;
+    text-align: justify;
+}
+
+/* Aviso de aplicación exclusiva para trabajos personalizados */
+.rubro-highlight-box.exclusive-notice {
+    background-color: #fdfaf0;
+    border-left: 4px solid #c89115;
+    border-color: rgba(200, 145, 21, 0.28);
+}
+
+.rubro-highlight-box.exclusive-notice strong {
+    color: #926305;
+}
+
+.rubro-highlight-box.exclusive-notice p {
+    color: #4f4019;
 }
 
 /* --- TRABAJOS PERSONALIZADOS EN BOLSAS LISAS --- */
@@ -402,6 +420,7 @@
     border-radius: var(--radius-xs);
     padding: 9px 12px;
     transition: var(--transition-fast);
+    text-align: justify;
 }
 
 .custom-bag-feature:hover {
