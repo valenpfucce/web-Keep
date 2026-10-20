@@ -234,7 +234,7 @@
 
 /* --- BLOQUE 3: MAPA Y UBICACIÓN --- */
 .map-section {
-    padding: 50px 10% 70px;
+    padding: 40px 10% 70px;
     background-color: var(--color-fondo-suave);
     text-align: center;
     font-family: var(--font-principal);
@@ -261,7 +261,8 @@
 
 .map-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
+    max-height: 800px;
     margin: 0 auto;
     border-radius: var(--radius-lg);
     overflow: hidden;
