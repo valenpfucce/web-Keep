@@ -1,18 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <title>Nosotros - Keep Life® Bolsas Barrera</title>
-    <meta name="description" content="Conocé la trayectoria de Keep Life: tecnología nacional en bolsas barrera para envasado al vacío, salón de ventas en El Palomar, flota propia de distribución y certificación SENASA.">
-    <meta name="keywords" content="nosotros keep life, historia keep life, fabrica bolsas vacio argentina, distribucion bolsas barrera, salon ventas el palomar, reparto flota propia caba gba">
+    <!-- SEO y Posicionamiento en Google Argentina -->
+    <title>Fábrica de Bolsas para Envasado al Vacío | Keep Life</title>
+    <meta name="description" content="Conocé a Keep Life: representantes directos de fábrica nacional de bolsas barrera y termocontraíbles. Salón de ventas en El Palomar y flota propia en CABA y GBA.">
+    <meta name="keywords" content="nosotros keep life, fabrica bolsas vacio argentina, distribucion bolsas barrera, bolsas termocontraibles fabrica, salon ventas el palomar, reparto flota propia caba gba, polietileno baja densidad argentina">
     <meta name="author" content="Keep Life">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/keepLife_icon_clean.png">
+    <!-- Directivas de Indexación y Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Canonical URL Absoluta -->
+    <link rel="canonical" href="https://www.keeplife.com.ar/nosotros.html">
+
+    <!-- Open Graph (Redes Sociales y WhatsApp) -->
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Keep Life">
+    <meta property="og:title" content="Fábrica de Bolsas para Envasado al Vacío | Keep Life">
+    <meta property="og:description" content="Representantes directos de fábrica nacional con tecnología de punta y certificación SENASA. Salón de ventas en El Palomar y logística propia.">
+    <meta property="og:url" content="https://www.keeplife.com.ar/nosotros.html">
+    <meta property="og:image" content="https://www.keeplife.com.ar/assets/img/KEEP%20LIFE-banner2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Keep Life - Fabricación de Bolsas Barrera y Termocontraíbles en Argentina">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fábrica de Bolsas para Envasado al Vacío | Keep Life">
+    <meta name="twitter:description" content="Representantes directos de fábrica nacional con tecnología de punta y certificación SENASA. Salón de ventas en El Palomar y logística propia.">
+    <meta name="twitter:image" content="https://www.keeplife.com.ar/assets/img/KEEP%20LIFE-banner2.jpg">
+
+    <!-- Favicon y Theme Color -->
+    <link rel="icon" type="image/png" href="assets/icons/keepLife-solo-logo.png">
+    <link rel="apple-touch-icon" href="assets/icons/keepLife-solo-logo.png">
+    <meta name="theme-color" content="#3d7824">
 
     <!-- Hojas de Estilo CSS Vanilla -->
     <link rel="stylesheet" href="styles/style.css">
@@ -24,6 +50,54 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD: AboutPage, BreadcrumbList y LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://www.keeplife.com.ar/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Nosotros y Trayectoria",
+              "item": "https://www.keeplife.com.ar/nosotros.html"
+            }
+          ]
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://www.keeplife.com.ar/nosotros.html#about",
+          "url": "https://www.keeplife.com.ar/nosotros.html",
+          "name": "Nosotros - Keep Life Argentina",
+          "description": "Trayectoria, valores y capacidad productiva de Keep Life: fabricación y distribución nacional de bolsas barrera para envasado al vacío y termocontraíbles con certificación SENASA.",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Keep Life",
+            "url": "https://www.keeplife.com.ar",
+            "logo": "https://www.keeplife.com.ar/assets/icons/keepLife-solo-logo.png",
+            "telephone": "+54 9 11 5379-6041",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Av. Ing. Guillermo Marconi 6521",
+              "addressLocality": "El Palomar",
+              "addressRegion": "Provincia de Buenos Aires",
+              "postalCode": "B1684",
+              "addressCountry": "AR"
+            }
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -31,36 +105,49 @@
     <!-- HEADER DINÁMICO -->
     <div id="header"></div>
 
+    <!-- MIGA DE PAN SEMÁNTICA (BREADCRUMB) -->
+    <nav class="breadcrumb-nav" aria-label="Ruta de navegación">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+                <a href="./">Inicio</a>
+                <span class="breadcrumb-separator">/</span>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Nosotros
+            </li>
+        </ol>
+    </nav>
+
     <!-- CONTENIDO PRINCIPAL: NOSOTROS -->
     <main id="content">
 
-        <!-- SECCIÓN TÍTULO -->
+        <!-- SECCIÓN TÍTULO H1 ÚNICO -->
         <section class="section-title-container">
-            <span class="badge badge-center">Nuestra Empresa</span>
+            <span class="badge badge-center">Nuestra Empresa y Trayectoria</span>
             <h1 class="section-title">NOSOTROS</h1>
             <p class="section-subtitle">
-                Soluciones a medida para comercios, industrias y hogares.
+                Representantes directos de fábrica nacional con tecnología de punta en envases flexibles y bolsas para envasado al vacío.
             </p>
         </section>
 
         <!-- SECCIÓN 1: QUIÉNES SOMOS -->
-        <section class="about-intro-section">
+        <section class="about-intro-section" aria-label="Quiénes Somos y Diferenciales Keep Life">
             <div class="about-grid">
                 <div class="about-text-content">
                     <span class="badge">Trayectoria y Especialización</span>
-                    <h2 class="about-title">Quiénes Somos</h2>
+                    <h2 class="about-title">Quiénes Somos y Propuesta de Valor</h2>
                     <p class="about-p">
-                        En <strong>Keep Life®</strong> somos especialistas en la fabricación y distribución de <strong>bolsas barrera de alta tecnología para el envasado al vacío</strong>. Nacimos con el propósito de acercar un producto nacional de excelencia que compita de igual a igual con las marcas multinacionales instaladas en el país.
+                        En <strong>Keep Life®</strong> somos especialistas en la fabricación y distribución de <strong>bolsas barrera de alta tecnología para el envasado al vacío</strong> y <strong>bolsas termocontraíbles</strong>. Nacimos con el propósito de acercar al mercado argentino un producto nacional de excelencia con certificación oficial de <strong>SENASA</strong>, compitiendo de igual a igual en calidad y prestaciones con las marcas multinacionales instaladas en el país.
                     </p>
                     <p class="about-p">
-                        Vinculados históricamente a la industria del polietileno y los polímeros técnicos, conocemos en profundidad las exigencias de conservación, higiene y sellado que demandan los alimentos modernos.
+                        Nuestras bolsas multicapa combinan <strong>Poliamida (barrera al oxígeno), Polietileno (soldadura hermética) y EVOH</strong>, garantizando una excelente plasticidad que evita quemaduras por congelación, cristales de hielo y deshidratación, con soldaduras ultra resistentes y una tasa de oxígeno residual inferior al 1%.
                     </p>
                     <p class="about-p">
-                        En el año <strong>2020 inauguramos nuestro salón de ventas a la calle</strong> para la atención directa al mostrador en <strong>Av. Ing. Marconi 6521 (El Palomar)</strong>, lo que nos permitió entablar una relación cercana y personalizada con productores, chefs, comerciantes y usuarios hogareños, brindando asesoramiento técnico honesto y soluciones inmediatas.
+                        En el año <strong>2020 inauguramos nuestro salón de ventas a la calle</strong> para la atención directa al mostrador en <strong>Av. Ing. Guillermo Marconi 6521 (El Palomar)</strong>. Allí ofrecemos soluciones personalizadas para productores gastronómicos, frigoríficos, fiambrerías y usuarios particulares, con precios competitivos y asesoramiento técnico directo.
                     </p>
                 </div>
                 <div class="about-image-content">
-                    <img src="assets/img/caja-keep.png" alt="Caja de bolsas Keep Life" class="about-img">
+                    <img src="assets/img/caja-keep.png" alt="Caja y empaque institucional de bolsas para envasado al vacío Keep Life" class="about-img" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -69,7 +156,7 @@
         <section class="papelero-banner-section" aria-label="El Papelero - Distribuidor mayorista de descartables">
             <div class="papelero-banner">
                 <div class="papelero-brand">
-                    <img src="assets/img/logo-papelero.jpg" alt="Logo El Papelero - Distribuidor Mayorista de Descartables" class="papelero-logo" loading="lazy">
+                    <img src="assets/img/logo-papelero.jpg" alt="Logo de El Papelero - Distribuidor Mayorista de Descartables" class="papelero-logo" loading="lazy" decoding="async">
                     <span class="papelero-tagline">Distribuidor mayorista de descartables</span>
                 </div>
                 <a href="https://www.elpapelero.com.ar" target="_blank" rel="noopener noreferrer" class="btn btn-papelero" id="btn-visitar-papelero-nosotros">
@@ -80,51 +167,51 @@
         </section>
 
         <!-- SECCIÓN 3: REPARTO Y DISTRIBUCIÓN -->
-        <section class="logistics-section">
+        <section class="logistics-section" aria-label="Logística y Cobertura Nacional">
             <div class="logistics-container">
                 <div class="logistics-header">
                     <span class="badge badge-center">Logística Integrada</span>
                     <h2 class="section-title">Reparto y Distribución</h2>
                     <p class="section-subtitle">
-                        Contamos con flota propia de vehículos para hacer efectiva la entrega de mercadería, entendiendo que hoy es clave la gestión del tiempo y la atención personalizada.
+                        Contamos con flota propia de vehículos para hacer efectiva la entrega de mercadería entendiendo que hoy es clave la gestión del tiempo y la atención personalizada.
                     </p>
                 </div>
 
                 <div class="logistics-grid">
                     <div class="logistics-card">
                         <div class="logistics-icon">🚚</div>
-                        <h3>Flota Propia</h3>
-                        <p>Unidades vehiculares dedicadas a la distribución segura y ágil de pedidos mayoristas y comerciales, garantizando trato directo y responsabilidad en cada entrega.</p>
+                        <h3>Flota Propia de Reparto</h3>
+                        <p>Unidades dedicadas a la entrega rápida y segura de pedidos comerciales e industriales, asegurando el resguardo y trazabilidad de los envases.</p>
                     </div>
 
                     <div class="logistics-card">
                         <div class="logistics-icon">📍</div>
-                        <h3>GBA y CABA</h3>
-                        <p>Cubrimos de manera semanal y planificada los principales corredores comerciales e industriales de Gran Buenos Aires y la Ciudad Autónoma de Buenos Aires.</p>
+                        <h3>Cobertura Semanal GBA y CABA</h3>
+                        <p>Cubrimos Gran Buenos Aires y Capital Federal semanalmente con cronogramas coordinados para abastecer el stock continuo de tu negocio.</p>
                     </div>
 
                     <div class="logistics-card">
                         <div class="logistics-icon">📦</div>
-                        <h3>Envíos a Todo el País</h3>
-                        <p>Para nuestros clientes en el interior de la Argentina, despachamos con rapidez en los transportes o expresos de cargas de su preferencia y confianza.</p>
+                        <h3>Envíos al Interior del País</h3>
+                        <p>También despachamos en expresos y empresas de transporte para los pedidos de nuestros clientes en todas las provincias argentinas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 4: SERVICIOS Y ASESORAMIENTO -->
-        <section class="services-section">
+        <!-- SECCIÓN 4: SERVICIOS Y SOLUCIONES POR RUBRO -->
+        <section class="services-section" aria-label="Soluciones por Rubro y Servicios Especializados">
             <div class="services-container">
                 <div class="services-header">
-                    <span class="badge badge-center">Nuestros Servicios</span>
-                    <h2 class="section-title">Soluciones para Cada Escala</h2>
+                    <span class="badge badge-center">Nuestros Servicios y Catálogo</span>
+                    <h2 class="section-title">Soluciones Integrales para Cada Rubro</h2>
                     <p class="section-subtitle">
-                        Desde la cocina de un hogar hasta plantas frigoríficas de producción continua.
+                        Desde el mostrador de atención al público hasta grandes industrias de elaboración y envasado continuo.
                     </p>
                 </div>
 
                 <div class="services-grid">
-                    <!-- Servicio 1 -->
+                    <!-- Servicio 1: Venta Minorista y Mayorista -->
                     <div class="service-card">
                         <div class="service-card-header">
                             <span class="service-icon-wrap">⚖️</span>
@@ -132,15 +219,15 @@
                         </div>
                         <div class="service-card-body">
                             <p>
-                                Ofrecemos precios altamente competitivos para papeleras, revendedores, carnicerías gourmet, queserías y distribuidores gracias a nuestra vinculación directa desde la fabricación. 
+                                A partir del 2020 inauguramos el salón de ventas a la calle para la atención al mostrador, donde ofrecemos soluciones a las necesidades de nuestros clientes en distintos rubros.
                             </p>
                             <p>
-                                Además, nuestro salón de ventas al público permite adquirir rollos gofrados fraccionados o cajas de bolsas lisas sin mínimos inaccesibles, con asesoramiento técnico en el momento.
+                                Ofrecemos precios altamente competitivos para papeleras, revendedores o distribuidores, dado que estamos vinculados al rubro desde la fabricación de <strong>polietilenos de baja densidad en sus distintos formatos: bolsas, bobinas y láminas</strong>.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Servicio 2 -->
+                    <!-- Servicio 2: Flexografía y Marca -->
                     <div class="service-card">
                         <div class="service-card-header">
                             <span class="service-icon-wrap">🎨</span>
@@ -154,6 +241,40 @@
                                 <li><strong>Impresión en ambas caras:</strong> en 2 o hasta 4 colores, incluyendo logotipos, certificaciones y tablas nutricionales obligatorias.</li>
                                 <li><strong>Ahorro en etiquetado:</strong> reduce sustancialmente el costo operativo y el tiempo de pegado manual de etiquetas autoadhesivas.</li>
                                 <li><strong>Propiedad del cliché:</strong> el polímero o cliché de impresión se costea por única vez y queda a disposición del cliente para sucesivas tiradas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3: Gastronomía y Comercios -->
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <span class="service-icon-wrap">🍽️</span>
+                            <h3>Gastronomía y Comercios</h3>
+                        </div>
+                        <div class="service-card-body">
+                            <p>
+                                Bandejas frío-calor, estuches, ensaladeras, vasos y potes. Contamos con marcas principales y alternativas eco.
+                            </p>
+                            <p>
+                                Films alimenticios, papeles parafinados, papel manteca, papeles térmicos, aluminizados, entre otros. Bolsas de papel fast food, con manija, acetatos, mangas e insumos de catering. Cajas para tortas, micro corrugadas para pizza, empanadas, hamburguesas y embalaje gastronómico. Bolsas de polietileno en todos los formatos, virgen o recicladas, personalizables por flexografía.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4: Oficinas y Empresas -->
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <span class="service-icon-wrap">🏢</span>
+                            <h3>Oficinas y Empresas</h3>
+                        </div>
+                        <div class="service-card-body">
+                            <p>
+                                Soluciones integrales de embalaje corporativo y logística:
+                            </p>
+                            <ul>
+                                <li><strong>Cajas de cartón:</strong> reforzadas y de simple onda, personalizables con logotipo.</li>
+                                <li><strong>Insumos de embalaje:</strong> Film Stretch virgen, cintas de embalar transparentes y marrones, cartones corrugados y Pluribol anti-impacto (burbuja).</li>
+                                <li><strong>E-commerce y Librería:</strong> Bolsas e-commerce inviolables, resmas, cuadernos, insumos de oficina y librería comercial general.</li>
                             </ul>
                         </div>
                     </div>

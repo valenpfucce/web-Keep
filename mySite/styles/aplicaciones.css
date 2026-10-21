@@ -684,3 +684,199 @@
         font-size: 0.78rem;
     }
 }
+
+/* --- GUÍA RÁPIDA: COMPARADOR Y SELECCIÓN DE BOLSA (FEATURED SNIPPETS) --- */
+.guide-selection-section {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 36px 32px;
+    margin-bottom: 48px;
+}
+
+.guide-selection-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 28px auto;
+}
+
+.guide-selection-title {
+    font-family: var(--font-titulos);
+    font-size: 1.8rem;
+    color: var(--color-primario);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.guide-selection-subtitle {
+    color: var(--color-texto-suave);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.guide-card {
+    background: var(--color-fondo-suave);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-sm);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-normal);
+}
+
+.guide-card:hover {
+    border-color: var(--color-primario);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.guide-card-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-primario);
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+
+.guide-card h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.15rem;
+    color: var(--color-texto);
+    margin-bottom: 10px;
+}
+
+.guide-card p {
+    font-size: 0.88rem;
+    color: var(--color-texto-suave);
+    line-height: 1.55;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+.guide-meta {
+    font-size: 0.8rem;
+    color: var(--color-texto-muted);
+    border-top: 1px dashed var(--color-borde);
+    padding-top: 10px;
+}
+
+/* --- SECCIÓN FAQ CON DETAILS Y SUMMARY (APLICACIONES) --- */
+.faq-details-section {
+    margin-top: 56px;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 40px 36px;
+}
+
+.faq-details-header {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 34px auto;
+}
+
+.faq-details-title {
+    font-family: var(--font-titulos);
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.faq-details-subtitle {
+    color: var(--color-texto-suave);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.faq-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-details-item {
+    background: var(--color-fondo-suave);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    transition: var(--transition-normal);
+}
+
+.faq-details-item[open] {
+    border-color: var(--color-secundario);
+    box-shadow: var(--shadow-sm);
+    background: var(--color-blanco);
+}
+
+.faq-details-summary {
+    padding: 18px 22px;
+    font-family: var(--font-principal);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: var(--transition-fast);
+}
+
+.faq-details-summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-details-summary:hover {
+    color: var(--color-primario);
+    background: rgba(110, 179, 61, 0.08);
+}
+
+.faq-details-summary::after {
+    content: "＋";
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-left: 12px;
+    transition: transform var(--transition-fast);
+}
+
+.faq-details-item[open] .faq-details-summary::after {
+    content: "—";
+    color: var(--color-secundario-oscuro);
+}
+
+.faq-details-content {
+    padding: 0 22px 20px 22px;
+    font-size: 0.94rem;
+    line-height: 1.7;
+    color: var(--color-texto-suave);
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.faq-details-content p {
+    margin-top: 12px;
+}
+
+.faq-details-content ul {
+    margin: 12px 0 12px 20px;
+}
+
+.faq-details-content li {
+    margin-bottom: 6px;
+}
+
+.faq-details-content strong {
+    color: var(--color-texto);
+}
+

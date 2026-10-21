@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(err => console.error("Error cargando footer:", err));
     }
 
-    // 3. Inyección de Home (solo si existe el contenedor #home en index.html)
+    // 3. Inyección de Home (solo si existe el contenedor #home y está vacío)
     const homeElem = document.getElementById("home");
-    if (homeElem) {
+    if (homeElem && !homeElem.children.length) {
         fetch("home.html")
             .then(res => {
                 if (!res.ok) throw new Error("No se pudo cargar home.html");

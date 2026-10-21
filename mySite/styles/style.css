@@ -235,4 +235,59 @@ button, input, textarea, select {
     .section-title-container .section-subtitle {
         font-size: 1rem;
     }
+
+    .breadcrumb-list {
+        padding: 0 16px;
+        font-size: 0.8rem;
+    }
 }
+
+/* --- BREADCRUMBS SEMÁNTICOS (SEO Y NAVEGABILIDAD) --- */
+.breadcrumb-nav {
+    width: 100%;
+    background-color:  var(--color-fondo-suave);
+    border-bottom: 1px solid var(--color-borde);
+    padding: 7px 0;
+}
+
+.breadcrumb-list {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    font-size: 0.83rem;
+    color: var(--color-texto-muted);
+}
+
+.breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumb-item a {
+    color: var(--color-texto-suave);
+    transition: var(--transition-fast);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--color-primario);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--color-primario);
+    font-weight: 600;
+}
+
+.breadcrumb-separator {
+    margin: 0 4px;
+    color: var(--color-texto-muted);
+    font-size: 0.8rem;
+    user-select: none;
+}
+
