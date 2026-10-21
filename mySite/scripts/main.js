@@ -16,9 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 headerElem.innerHTML = html;
                 highlightActiveMenu();
                 setupMobileMenuAutoClose();
+                setupHeaderScroll();
             })
             .catch(err => console.error("Error cargando header:", err));
     }
+
+    // Inicializar listener de scroll dinámico
+    setupHeaderScroll();
 
     // 2. Inyección de Footer
     const footerElem = document.getElementById("footer");
@@ -85,4 +89,40 @@ function setupMobileMenuAutoClose() {
             });
         });
     }
+}
+
+/**
+ * Controla el comportamiento dinámico del header de navegación al hacer scroll:
+ * - Reduce el alto del header en ~5px cuando se desplaza hacia abajo (scrollY > 35px).
+ * - Restaura el alto inicial (+5px) al volver arriba de todo.
+ * - La barra de horarios superior permanece estática en la página sin parpadeos ni transiciones.
+ */
+function setupHeaderScroll() {
+    const headerElem = document.getElementById("header");
+    if (!headerElem || headerElem.dataset.scrollInit) return;
+    headerElem.dataset.scrollInit = "true";
+
+    let ticking = false;
+
+    const handleScroll = () => {
+        const headerNav = document.querySelector(".header-nav");
+        const isScrolled = window.scrollY > 35;
+
+        if (headerNav) {
+            headerNav.classList.toggle("scrolled", isScrolled);
+        }
+        headerElem.classList.toggle("scrolled", isScrolled);
+
+        ticking = false;
+    };
+
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            window.requestAnimationFrame(handleScroll);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Chequeo de estado inicial
+    handleScroll();
 }
