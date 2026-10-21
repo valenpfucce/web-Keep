@@ -334,41 +334,77 @@
     background-color: var(--color-blanco);
     border-top: 1px solid var(--color-borde);
     border-bottom: 1px solid var(--color-borde);
+    padding: 30px 20px;
     overflow: hidden;
 }
 
 .papelero-banner {
-    position: relative;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
 }
 
-.papelero-banner-img {
-    width: 100%;
-    height: auto;
+.papelero-brand {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.papelero-logo {
+    height: 60px;
+    width: auto;
+    max-width: 250px;
+    object-fit: contain;
     display: block;
 }
 
-.papelero-banner-btn {
-    position: absolute;
-    top: 50%;
-    right: 3.5%;
-    transform: translateY(-50%);
+.papelero-tagline {
+    font-size: 0.98rem;
+    color: var(--color-texto-suave);
+    font-weight: 500;
+    padding-left: 22px;
+    border-left: 2px solid var(--color-borde);
+    line-height: 1.3;
+}
+
+/* Botón institucional El Papelero: Amarillo con texto negro */
+.btn-papelero {
+    background-color: #f7be00;
+    color: #111111;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 28px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 14px rgba(247, 190, 0, 0.35);
+    border: none;
+    transition: var(--transition-normal);
     white-space: nowrap;
-    box-shadow: 0 8px 20px rgba(61, 120, 36, 0.28), 0 2px 6px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    font-family: var(--font-header-menu);
 }
 
-.papelero-banner-btn:hover {
-    transform: translateY(calc(-50% - 2px));
-    box-shadow: 0 12px 26px rgba(43, 86, 24, 0.35), var(--shadow-glow);
+.btn-papelero:hover {
+    background-color: #e5af00;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(247, 190, 0, 0.48);
 }
 
-.papelero-banner-btn-arrow {
+.btn-papelero .btn-papelero-arrow {
     display: inline-block;
+    font-size: 1.1rem;
+    line-height: 1;
     transition: transform var(--transition-normal);
 }
 
-.papelero-banner-btn:hover .papelero-banner-btn-arrow {
+.btn-papelero:hover .btn-papelero-arrow {
     transform: translateX(4px);
 }
 
@@ -592,30 +628,39 @@
         order: -1;
     }
 
-    .papelero-banner-btn {
-        padding: 10px 20px;
-        font-size: 0.82rem;
-        right: 2.5%;
-    }
 }
 
 @media (max-width: 768px) {
+    .papelero-banner-section {
+        padding: 22px 16px;
+    }
+
     .papelero-banner {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        padding-bottom: 22px;
+        justify-content: center;
+        text-align: center;
+        gap: 14px;
     }
 
-    .papelero-banner-btn,
-    .papelero-banner-btn:hover {
-        position: static;
-        transform: none;
-        margin-top: 18px;
+    .papelero-brand {
+        flex-direction: column;
+        gap: 8px;
     }
 
-    .papelero-banner-btn:hover {
-        transform: translateY(-2px);
+    .papelero-logo {
+        height: 38px;
+        margin: 0 auto;
+    }
+
+    .papelero-tagline {
+        padding-left: 0;
+        border-left: none;
+        font-size: 0.88rem;
+    }
+
+    .btn-papelero {
+        padding: 11px 26px;
+        font-size: 0.9rem;
     }
 }
 
