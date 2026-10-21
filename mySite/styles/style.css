@@ -107,7 +107,7 @@ button, input, textarea, select {
 
 /* Títulos de sección globales */
 .section-title-container {
-    padding: 65px 20px 45px;
+    padding: 35px 20px 45px;
     text-align: center;
     background-color: var(--color-primario-suave);
     border-bottom: 1px solid var(--color-borde);
