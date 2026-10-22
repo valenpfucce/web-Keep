@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(err => console.error("Error cargando footer:", err));
     }
 
-    // 3. Inyección de Home; el contenido en index.html queda como respaldo si falla la carga.
+    
     const homeElem = document.getElementById("home");
-    if (homeElem) {
+    if (homeElem && !homeElem.children.length) {
         fetch("home.html")
             .then(res => {
                 if (!res.ok) throw new Error("No se pudo cargar home.html");
