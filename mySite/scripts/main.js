@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializar listener de scroll dinámico
     setupHeaderScroll();
 
+    // Inicializar navegación por swipe táctil en vista mobile
+    setupMobilePageSwipe();
+
     // 2. Inyección de Footer
     const footerElem = document.getElementById("footer");
     if (footerElem) {
@@ -125,4 +128,89 @@ function setupHeaderScroll() {
 
     // Chequeo de estado inicial
     handleScroll();
+}
+
+/**
+ * Navegación táctil (swipe horizontal hacia la izquierda) en vista mobile:
+ * Secuencia: Inicio > Aplicaciones > Nosotros > Contacto > FAQ
+ */
+function setupMobilePageSwipe() {
+    const pageOrder = [
+        "index.html",
+        "aplicaciones.html",
+        "nosotros.html",
+        "contacto.html",
+        "faq.html"
+    ];
+
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let ignoreSwipe = false;
+
+    const getCurrentPageIndex = () => {
+        const path = window.location.pathname.toLowerCase();
+        for (let i = 1; i < pageOrder.length; i++) {
+            if (path.endsWith(pageOrder[i])) {
+                return i;
+            }
+        }
+        return 0; // Por defecto Inicio (index.html o "/")
+    };
+
+    document.addEventListener("touchstart", (e) => {
+        if (window.innerWidth > 992 || e.touches.length !== 1) {
+            ignoreSwipe = true;
+            return;
+        }
+
+        const menuCheckbox = document.getElementById("menu-toggle");
+        if (menuCheckbox && menuCheckbox.checked) {
+            ignoreSwipe = true;
+            return;
+        }
+
+        const target = e.target;
+        if (
+            target &&
+            target.closest(
+                ".carousel-container, .table-scroll-wrapper, .map-container, .nav-menu, input, textarea, select"
+            )
+        ) {
+            ignoreSwipe = true;
+            return;
+        }
+
+        ignoreSwipe = false;
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    document.addEventListener("touchend", (e) => {
+        if (ignoreSwipe || window.innerWidth > 992 || !e.changedTouches.length) {
+            return;
+        }
+
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+
+        // Umbral mínimo horizontal (70px) y predominancia horizontal frente al scroll vertical
+        if (Math.abs(deltaX) > 70 && Math.abs(deltaX) > Math.abs(deltaY) * 1.4) {
+            const currentIndex = getCurrentPageIndex();
+
+            if (deltaX < -70) {
+                // Swipe hacia la izquierda -> Página siguiente
+                const nextIndex = (currentIndex + 1) % pageOrder.length;
+                const nextPage = nextIndex === 0 ? "./" : pageOrder[nextIndex];
+                window.location.href = nextPage;
+            } else if (deltaX > 70) {
+                // Swipe hacia la derecha -> Página anterior
+                const prevIndex = (currentIndex - 1 + pageOrder.length) % pageOrder.length;
+                const prevPage = prevIndex === 0 ? "./" : pageOrder[prevIndex];
+                window.location.href = prevPage;
+            }
+        }
+    }, { passive: true });
 }

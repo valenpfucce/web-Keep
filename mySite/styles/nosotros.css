@@ -440,12 +440,12 @@
     .national-tech-section,
     .logistics-section, 
     .services-section {
-        padding: 50px 20px;
+        padding: 36px 16px;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
     }
 
     .about-image-content {
@@ -453,30 +453,75 @@
     }
 
     .about-title {
-        font-size: 1.9rem;
+        font-size: 1.65rem;
+        margin-bottom: 14px;
+    }
+
+    .about-p {
+        font-size: 0.94rem;
+        line-height: 1.65;
+        margin-bottom: 14px;
+    }
+
+    .logistics-header,
+    .services-header {
+        margin-bottom: 30px;
     }
 
     .logistics-header .section-title,
     .services-header .section-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    .logistics-grid {
+        gap: 18px;
+    }
+
+    .logistics-card {
+        padding: 26px 20px;
+    }
+
+    .logistics-icon {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+
+    .logistics-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 8px;
+    }
+
+    .services-grid {
+        gap: 18px;
     }
 
     .service-card {
-        padding: 28px 20px;
+        flex: 1 1 100%;
+        padding: 24px 18px;
+    }
+
+    .service-card-header h3 {
+        font-size: 1.15rem;
     }
 
     .papelero-banner-section {
-        background-position: center;
+        background-image: url('../assets/img/banner-papelero.png');
+        background-size: 235% auto;
+        background-position: left top;
+        background-repeat: no-repeat;
         background-color: var(--color-blanco);
-        padding: 24px 16px;
+        padding: 50px 0 22px 0;
+        min-height: auto;
     }
 
     .papelero-banner {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        gap: 14px;
+        gap: 12px;
         padding: 0;
+        width: 100%;
         background: transparent;
         box-shadow: none;
         border: none;
@@ -485,17 +530,23 @@
     .papelero-brand {
         flex-direction: column;
         gap: 8px;
+        width: 100%;
     }
 
     .papelero-logo {
-        height: 42px;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 6px 0;
+        background-color: var(--color-blanco);
+        margin: 0;
+        display: block;
     }
 
     .papelero-tagline {
         padding-left: 0;
         border-left: none;
-        font-size: 0.88rem;
+        font-size: 0.9rem;
         white-space: normal;
     }
 
