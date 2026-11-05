@@ -393,7 +393,28 @@ iframe {
 
 @media (max-width: 768px) {
     .contact-info-section, .contact-form-section, .map-section {
-        padding: 40px 15px;
+        padding: 32px 16px;
+    }
+
+    .info-grid {
+        gap: 18px;
+    }
+
+    .info-card {
+        padding: 26px 20px;
+    }
+
+    .info-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .map-section .section-title {
+        font-size: 1.55rem;
+    }
+
+    .address-text {
+        font-size: 0.92rem;
+        margin-bottom: 18px;
     }
 
     .form-wrapper {
@@ -421,21 +442,26 @@ iframe {
     }
 
     .map-container iframe {
-        height: 330px !important;
+        height: 300px !important;
     }
 
     .papelero-banner-section {
-        background-position: center;
+        background-image: url('../assets/img/banner-papelero.png');
+        background-size: 235% auto;
+        background-position: left top;
+        background-repeat: no-repeat;
         background-color: var(--color-blanco);
-        padding: 24px 16px;
+        padding: 50px 0 22px 0;
+        min-height: auto;
     }
 
     .papelero-banner {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        gap: 14px;
+        gap: 12px;
         padding: 0;
+        width: 100%;
         background: transparent;
         box-shadow: none;
         border: none;
@@ -444,17 +470,23 @@ iframe {
     .papelero-brand {
         flex-direction: column;
         gap: 8px;
+        width: 100%;
     }
 
     .papelero-logo {
-        height: 42px;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 6px 0;
+        background-color: var(--color-blanco);
+        margin: 0;
+        display: block;
     }
 
     .papelero-tagline {
         padding-left: 0;
         border-left: none;
-        font-size: 0.88rem;
+        font-size: 0.9rem;
         white-space: normal;
     }
 

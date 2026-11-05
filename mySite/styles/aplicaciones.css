@@ -656,9 +656,30 @@
 }
 
 @media (max-width: 576px) {
+    .applications-container {
+        padding: 24px 12px 45px 12px;
+    }
+
+    .applications-header {
+        margin-bottom: 28px;
+    }
+
+    .applications-main-title {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .applications-lead {
+        font-size: 0.9rem;
+    }
+
+    .applications-grid {
+        gap: 22px;
+    }
+
     .carousel-container,
     .card-media-single {
-        height: 240px;
+        height: 215px;
     }
 
     .carousel-btn {
@@ -668,8 +689,27 @@
     }
 
     .carousel-caption {
-        font-size: 0.8rem;
-        padding: 20px 12px 10px 12px;
+        font-size: 0.78rem;
+        padding: 18px 12px 10px 12px;
+    }
+
+    .rubro-card-content {
+        padding: 18px 14px;
+    }
+
+    .rubro-card-title {
+        font-size: 1.18rem;
+        margin-bottom: 12px;
+    }
+
+    .rubro-text-intro {
+        font-size: 0.88rem;
+        text-align: left;
+    }
+
+    .rubro-features-list li {
+        font-size: 0.86rem;
+        text-align: left;
     }
 
     .conservation-table th,
